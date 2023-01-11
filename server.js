@@ -1,6 +1,9 @@
 // DEPENDENCIES
 const express = require('express')
 const app = express()
+const { Sequelize } = require('sequelize');
+
+const sequelize = new Sequelize('postgres://')
 
 // CONFIGURATION / MIDDLEWARE
 require('dotenv').config()
