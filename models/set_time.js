@@ -1,6 +1,14 @@
 // DEPENDENCIES
 const { Sequelize, DataTypes,  Model, Deferrable } = require('sequelize')
-const sequelize = new Sequelize(process.env.PG_URI)
+const sequelize = new Sequelize(
+    process.env.DB_NAME,
+    process.env.DB_USERNAME, 
+    process.env.DB_PASSWORD, 
+    {
+        host: 'localhost',
+        dialect: 'postgres'
+    }
+)
 const Band = require('./band.js')
 const Event = require('./event.js')
 const Stage = require('./stage.js')
