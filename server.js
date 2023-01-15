@@ -34,8 +34,12 @@ app.get('/', (req, res) => {
     })
 })
 
+// CONTROLLERS 
+const bandController = require('./controllers/band_controller')
+app.use('/band', bandController)
+
 // LISTEN
-testSequelize();
+// testSequelize();
 
 app.listen(process.env.PORT, () => {
     console.log(`🎸 Rockin' on port: ${process.env.PORT}`)
