@@ -36,7 +36,11 @@ app.get('/', (req, res) => {
 
 // CONTROLLERS 
 const bandController = require('./controllers/band_controller')
+const eventController = require('./controllers/event_controller')
+const stageController = require('./controllers/stage_controller')
 app.use('/band', bandController)
+app.use('/event', eventController)
+app.use('/stage', stageController)
 
 // LISTEN
 // testSequelize();
